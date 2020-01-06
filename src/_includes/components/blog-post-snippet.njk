@@ -1,6 +1,7 @@
-{%- for post in postlist -%}
+{%- macro BlogPostSnippet(post) -%}
+
 <div class="post-snippet">
-  <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+  <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
   <div class="post-meta">
     <p class="date">{{post.date | readableDate}}</p>
     {%- set tags = post.data.tags | filterTags -%}
@@ -15,4 +16,4 @@
   </div>
   <p>{{ post.templateContent | truncate(250) | safe }}... (<a href="{{post.url | url}}">more</a>)</p>
 </div>
-{%- endfor -%}
+{%- endmacro -%}
