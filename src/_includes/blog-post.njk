@@ -1,6 +1,8 @@
 {% extends 'base.njk' %}
 {% block content %}
-<main class="page-in-collection">
+<main class="blog-index page-in-collection">
+
+  <div>
   <div class="content">
     <h1>{{title}}</h1>
     <div class="post-meta">
@@ -22,12 +24,13 @@
     {{content | safe}}
 
   </div>
-  <div>
-    {% set pagelist = collections.post %}
-    {% set thispage = page %}
-    {% set indexHref = '../../' %}
-    {%include 'components/collection-nav.njk' %}
+  {% set pagelist = collections.post %}
+  {% set thispage = page %}
+  {% set indexHref = '../../' %}
+  {%include 'components/collection-nav.njk' %}
+</div>
 
+  <div class="sidebar">
     <aside class="related-posts">
       <h2>Related Posts</h2>
       <ul>
@@ -42,6 +45,7 @@
       </ul>
     </aside>
   </div>
+
 </main>
 
 {% endblock %}

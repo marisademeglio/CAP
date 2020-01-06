@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Website project for Canadian Accessible Publishing",
   "scripts": {
-    "build": "rimraf docs && eleventy",
-    "serve": "rimraf docs && eleventy --serve"
+    "build": "rimraf docs && ./node_modules/.bin/eleventy",
+    "serve": "rimraf docs && ./node_modules/.bin/eleventy --serve"
   },
   "tags": [
     "accessibility",
@@ -22,7 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.8.2",
+    "@11ty/eleventy": "^0.9.0",
     "gulp": "^4.0.0",
     "gulp-pretty-html": "^2.0.10",
     "gulp-stylelint": "^9.0.0",
