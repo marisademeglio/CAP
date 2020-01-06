@@ -6,6 +6,8 @@ title: Resources
 This section aims to gather the existing guidelines and specifications in a way that makes it easy to find what you're looking for.
 
 ## Canadian Resources
+- [NNELS Accessible Publishing Summit Report](https://www.accessiblepublishing.ca/documents_resources/)
+
 - [What is the Accessible Canada Act?](https://www.canada.ca/en/employment-social-development/programs/accessible-people-disabilities.html)
 
 - [What is the Accessibility for Ontarians with Disabilities Act?](https://www.aoda.ca/guide-to-the-act/)
@@ -19,6 +21,8 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [Print Accessibility Matters. Australian Inclusive Publishing Intiative](https://aipi.com.au/)
 
+- [Accessibility Action Group in the UK](https://www.publishers.org.uk/activities/accessibility/)
+
 
 ## Guides to Accessible Publishing
 - [Book Industry Study Group (BISG) Guide to Accessible Publishing & Cheat Sheets](https://bisg.org/store/ViewProduct.aspx?ID=13534677)
@@ -27,6 +31,19 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [W3C - The Business Case for Digital Accessibility](https://www.w3.org/WAI/business-case/)
 
+- [Making Accessible HTML5](https://www.html5accessibility.com/)
+
+- [Diagram Center](http://diagramcenter.org/)
+
 ## Accessibility Etiquette
 - [“Blind etiquette: six ways to be gracious around people with visual impairments”](https://www.perkins.org/stories/blind-etiquette-six-ways-to-be-gracious-around-people-with-visual-impairments)
 
+## Free Tools for Testing
+
+- [Ace by DAISY - EPUB Accessibility Tester](https://inclusivepublishing.org/toolbox/accessibility-checker/)
+
+- [Axe by Deque](https://www.deque.com/axe/axe-for-web/)
+
+- [Paciello Group Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)
+
+- [Coblis - Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
