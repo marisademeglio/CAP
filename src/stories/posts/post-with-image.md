@@ -1,5 +1,5 @@
 ---
-title: Post with image
+title: Cats and things
 author: marisademeglio
 tags:
   - post

@@ -1,51 +1,41 @@
-{% extends 'base.njk' %}
+{%- extends 'base.njk' -%}
+{%- import 'components/collection-nav.njk' as CollectionNav -%}
+{%- import 'components/tag.njk' as Tag -%}
+{%- import 'components/blog-sidebar.njk' as BlogSidebar -%}
+{%- set recentPosts = collections.post | reverse -%}
+{%- set tags = collections.tagList | filterTags -%}
+
 {% block content %}
 <main class="blog-index page-in-collection">
+    <div>
+        <div class="content">
+            <h1>{{ title }}</h1>
+            <div class="post-meta">
+                <p>by {{authors[author].name}}, {{authors[author].organization}}</p>
+                <p>{{ page.date | readableDate }}</p>
 
-  <div>
-  <div class="content">
-    <h1>{{title}}</h1>
-    <div class="post-meta">
-      <p>by {{authors[author].name}}, {{authors[author].organization}}</p>
-      <p>{{ page.date | readableDate }}</p>
+                {%- set tags = tags | filterTags -%}
+                {%- if tags.length > 0 -%}
+                <p>
+                    <span class="label">Tags:</span>
+                    {%- for tag in tags -%}
+                    {{ Tag.Tag(tag) }}
+                    {%- endfor -%}
+                </p>
+                {%- endif -%}
+            </div>
 
-      {%- set tags = tags | filterTags -%}
-      {%- if tags.length > 0 -%}
-      <p>
-        <span class="label">Tags:</span>
-        {%- for tag in tags -%}
-          {% include 'components/tag.njk'%}
+            {{ content | safe }}
 
-        {%- endfor -%}
-      </p>
-      {%- endif -%}
+        </div>
+
+        {{ CollectionNav.CollectionNav(page, collections.post, '../../') }}
     </div>
 
-    {{content | safe}}
-
-  </div>
-  {% set pagelist = collections.post %}
-  {% set thispage = page %}
-  {% set indexHref = '../../' %}
-  {%include 'components/collection-nav.njk' %}
-</div>
-
-  <div class="sidebar">
-    <aside class="related-posts">
-      <h2>Related Posts</h2>
-      <ul>
-      {%- for tag in tags -%}
-        {%- set postlist = collections[tag] | filterSelfOut(page) -%}
-        {%- if postlist.length > 0 -%}
-          {%- for post in postlist  -%}
-            <li><a href="{{ post.url | url}}">{{ post.data.title }}</a></li>
-          {%- endfor -%}
-        {%- endif -%}
-      {%- endfor -%}
-      </ul>
-    </aside>
-  </div>
-
+    {%- set relatedPosts = collections.post | relatedPosts(tags, page) -%}
+    {%- set recentPosts = collections.post | reverse -%}
+    {%- set allTags = collections.tagList -%}
+    {{ BlogSidebar.BlogSidebar(relatedPosts, recentPosts, allTags) }}
 </main>
 
 {% endblock %}

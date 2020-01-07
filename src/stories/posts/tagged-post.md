@@ -1,5 +1,5 @@
 ---
-title: A post with a tag
+title: How to write a post
 author: marisademeglio
 date: 2019-04-15
 tags:

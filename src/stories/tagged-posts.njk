@@ -8,7 +8,6 @@ pagination:
     - post
     - posts
     - blog
-    - certification
     - resources
     - tagList
   addAllPagesToCollections: true
@@ -18,6 +17,8 @@ renderData:
 permalink: /blog/tags/{{tag}}/
 ---
 <h1>Tagged "{{tag}}"</h1>
-
-{%- set postlist = collections[ tag ] -%}
-{%- include "components/blog-post-list-expanded.njk" -%}
+{%- import "components/blog-post-snippet.njk" as BlogPostSnippet -%}
+{%- set posts = collections[ tag ] -%}
+{%- for post in posts -%}
+  {{ BlogPostSnippet.BlogPostSnippet(post) }}
+{%- endfor -%}
