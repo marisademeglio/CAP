@@ -1,7 +1,7 @@
 {%- macro BlogPostSnippet(post) -%}
 {%- import "components/tag.njk" as Tag -%}
 
-<div class="post-snippet">
+<article class="post-snippet">
     <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
     <div class="post-meta">
         <p class="date">{{ post.date | readableDate }}</p>
@@ -16,6 +16,6 @@
         {%- endif -%}
     </div>
     <p>{{ post.templateContent | truncate(250) | safe }}... (<a href="{{ post.url | url }}">more</a>)</p>
-</div>
+</article>
 
 {%- endmacro -%}
