@@ -2,17 +2,15 @@
 layout: 'base.njk'
 title: 'Accessibility Stories: All posts'
 ---
-{%- import "components/blog-post-list.njk" as BlogPostList -%}
 {%- import "components/blog-sidebar.njk" as BlogSidebar -%}
-{% set posts = collections.post | reverse %}
-
+  
 <main class="blog-index">
   <div>
     <h2>All Accessibility Stories</h2>
-    {{ BlogPostList.BlogPostList(posts) }}
+    <ul class="large">
+      {%- for post in collections.post -%}
+      <li><a href="{{ post.url | url }}">{{ post.data.title }}</a> by {{ post.data.authors[post.data.author].name}} on {{ post.date | readableDate }}</li>
+      {%- endfor -%}
   </div>
-  {%- set relatedPosts = [] -%}
-  {%- set recentPosts = collections.post | reverse -%}
-  {%- set allTags = collections.tagList -%}
-  {{ BlogSidebar.BlogSidebar(relatedPosts, recentPosts, allTags) }}
+  {{ BlogSidebar.BlogSidebar(collections) }}
 </main>

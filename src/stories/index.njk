@@ -2,7 +2,7 @@
 layout: 'base.njk'
 title: Accessibility Stories
 ---
-{%- import "components/blog-post-snippet.njk" as BlogPostSnippet -%}
+{%- import "components/blog-post.njk" as BlogPost -%}
 {%- import "components/blog-sidebar.njk" as BlogSidebar -%}
 {% set spotlightPost = collections.post | reverse | first %}
 
@@ -13,11 +13,9 @@ title: Accessibility Stories
     <p>Lorem magna veniam ad labore.</p>
 
     <h2>Read our latest post</h2>
-    {{ BlogPostSnippet.BlogPostSnippet(spotlightPost) }}
+    {{ BlogPost.BlogPost(spotlightPost, true, 3) }}
 
   </div>
-  {%- set relatedPosts = [] -%}
-  {%- set recentPosts = collections.post | reverse -%}
-  {%- set tags = collections.tagList -%}
-  {{ BlogSidebar.BlogSidebar(relatedPosts, recentPosts, tags) }}
+  
+  {{ BlogSidebar.BlogSidebar(collections) }}
 </main>

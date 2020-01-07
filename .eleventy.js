@@ -5,6 +5,8 @@ const md = require("markdown-it");
 const { DateTime } = require("luxon");
 const fs = require('fs');
 const util = require('util');
+const tagExcludeList = ["post", "posts", "blog", "certification", "resources"];
+let filterTags = tags => tags ? tags.filter(item => !tagExcludeList.includes(item)) : [];
 
 module.exports = function (eleventyConfig) {
 
@@ -18,14 +20,9 @@ module.exports = function (eleventyConfig) {
         return content ? content.slice(0, chars) + "</code></pre>" : '';
     });
 
-    eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
-    });
+    eleventyConfig.addFilter("readableDate", dateObj => DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy"));
     
-    eleventyConfig.addFilter("filterTags", (tags, src) => {
-        let excludeList = ["post", "posts", "blog", "certification", "resources"];
-        return tags ? tags.filter(item => !excludeList.includes(item)) : [];
-    });
+    eleventyConfig.addFilter("filterTags", (tags) => filterTags(tags));
 
     eleventyConfig.addFilter("head", (array, n) => {
         if (n < 0) {
@@ -57,24 +54,28 @@ module.exports = function (eleventyConfig) {
         }
     });
 
-    eleventyConfig.addFilter("sortByOrder", arr => {
-        return arr.sort(function (a, b) {
-            return b.data.order < a.data.order;
-        });
-    });
+    eleventyConfig.addFilter("sortByOrder", arr => arr.sort((a, b) => b.data.order < a.data.order));
 
     eleventyConfig.addFilter('dump', obj => {
         return util.inspect(obj)
     });
 
-    eleventyConfig.addFilter('relatedPosts', (allPosts, tags, thisPost) => {
-        let postsWithTags = tags.map(tag => {
-            let taggedPosts = allPosts.filter(post => post.data.tags.includes(tag));
-            return taggedPosts;
-        }).reduce((acc, curr) => acc.concat(curr), []);
-        let filteredList = postsWithTags.filter(post => post.url != thisPost.url);
-        return Array.from(new Set(filteredList));
+    eleventyConfig.addFilter('relatedPosts', (collections, thisPost) => {
+        if (thisPost.data.hasOwnProperty('tags')) {
+            let postsWithTags = filterTags(thisPost.data.tags).map(tag => {
+                let taggedPosts = collections.post.filter(post => post.data.tags.includes(tag));
+                return taggedPosts;
+            }).reduce((acc, curr) => acc.concat(curr), []);
+            let filteredList = postsWithTags.filter(post => post.url != thisPost.url);
+            return Array.from(new Set(filteredList));
+        }
+        else {
+            return [];
+        }
+        
     });
+
+    eleventyConfig.addFilter('getPostForPage', (page, posts) => posts.find(post => post.fileSlug == page.fileSlug));
 
     eleventyConfig.setLibrary("njk", nunjucksEnv);
 

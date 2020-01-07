@@ -1,0 +1,29 @@
+{%- extends 'base.njk' -%}
+{%- import 'components/blog-post.njk' as BlogPost -%}
+{%- import 'components/blog-sidebar.njk' as BlogSidebar -%}
+{%- set next = page | nextItem(collections.post) -%}
+{%- set prev = page | prevItem(collections.post) -%}
+{%- set thispost = page | getPostForPage(collections.post) -%}
+
+{% block content %}
+
+<main class="blog-index page-in-collection">
+    <div>
+        
+        {{ BlogPost.BlogPost (thispost, false, 2) }}
+
+        <nav class="collection-nav" aria-label="Blog post navigation">
+            <ul>
+                {%- if next or prev -%}
+                {%- if prev -%}<li class="prev"><a href="{{prev['url'] | url}}">Previous: {{ prev['title'] }}</a></li>{%- endif -%}
+                {%- if next -%}<li class="next"><a href="{{next['url'] | url}}">Next: {{ next['title'] }}</a></li>{%- endif -%}
+                {%- endif -%}
+            </ul>
+        </nav>
+
+    </div>
+
+    {{ BlogSidebar.BlogSidebar(collections, thispost) }}
+</main>
+
+{% endblock %}

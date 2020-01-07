@@ -13,12 +13,19 @@ pagination:
   addAllPagesToCollections: true
 layout: 'base.njk'
 renderData:
-  title: Posts tagged “{{tag}}”
-permalink: /blog/tags/{{tag}}/
+  title: Stories tagged “{{tag}}”
+permalink: /stories/tags/{{tag}}/
 ---
-<h1>Tagged "{{tag}}"</h1>
-{%- import "components/blog-post-snippet.njk" as BlogPostSnippet -%}
+{%- import "components/blog-post.njk" as BlogPost -%}
+{%- import "components/blog-sidebar.njk" as BlogSidebar -%}
 {%- set posts = collections[ tag ] -%}
-{%- for post in posts -%}
-  {{ BlogPostSnippet.BlogPostSnippet(post) }}
-{%- endfor -%}
+
+<main class="blog-index">
+  <div>
+    <h2>Posts Tagged "{{tag}}"</h2>
+    {%- for post in posts -%}
+      {{ BlogPost.BlogPost(post, true, 3) }}
+    {%- endfor -%}
+  </div>
+  {{ BlogSidebar.BlogSidebar(collections) }}
+</main>
