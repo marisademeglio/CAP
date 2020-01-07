@@ -1,0 +1,18 @@
+---
+layout: 'base.njk'
+title: 'Accessibility Stories: All posts'
+---
+{%- import "components/blog-post-list.njk" as BlogPostList -%}
+{%- import "components/blog-sidebar.njk" as BlogSidebar -%}
+{% set posts = collections.post | reverse %}
+
+<main class="blog-index">
+  <div>
+    <h2>All Accessibility Stories</h2>
+    {{ BlogPostList.BlogPostList(posts) }}
+  </div>
+  {%- set relatedPosts = [] -%}
+  {%- set recentPosts = collections.post | reverse -%}
+  {%- set allTags = collections.tagList -%}
+  {{ BlogSidebar.BlogSidebar(relatedPosts, recentPosts, allTags) }}
+</main>

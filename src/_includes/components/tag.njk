@@ -1,2 +1,6 @@
-{%set tagUrl %}/blog/tags/{{tag}}{% endset %}
-<a href="{{tagUrl | url}}" class="tag">{{ tag }}</a>
+{%- macro Tag(tag) -%}
+{%- set tagUrl -%}/blog/tags/{{ tag }}{%- endset -%}
+
+<a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+
+{%- endmacro -%}

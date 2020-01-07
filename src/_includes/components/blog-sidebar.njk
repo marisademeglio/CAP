@@ -1,0 +1,24 @@
+{%- macro BlogSidebar(relatedPosts, recentPosts, tags) -%}
+{%- import "components/blog-post-list.njk" as BlogPostList -%}
+{%- import "components/tag.njk" as Tag -%}
+
+<aside>
+    {%- if relatedPosts.length > 0 -%}
+    <h2>Related Posts</h2>
+    {{ BlogPostList.BlogPostList(relatedPosts) }}
+    {%- endif -%}
+
+    <h2>Recent Posts</h2>
+    {{ BlogPostList.BlogPostList(recentPosts) }}
+
+    <p><a href="{{ '/stories/all-posts' | url }}">View all posts</a></p>
+
+    <h2>Tags</h2>
+    <ul>
+        {%- for tag in tags -%}
+        <li>{{ Tag.Tag(tag) }}</li>
+        {%- endfor -%}
+    </ul>
+</aside>
+
+{%- endmacro -%}

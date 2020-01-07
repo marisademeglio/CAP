@@ -1,29 +1,26 @@
-{% extends 'htmleton.njk' %}
-{% block head %}
-<title>{{site.title}}{% if title %}: {{ title }}{% endif %}</title>
-{% endblock %}
+{%- extends 'htmleton.njk' -%}
+{%- block head -%}
+<title>{{ site.title }}{%- if title -%}: {{ title }}{%- endif -%}</title>
+{%- endblock -%}
 
-{%block body %}
+{%- block body -%}
 <header>
-  <h1>{{site.title}}</h1>
-  <nav>
-    <ul>
-      <li><a href="{{'/' | url}}">Home</a></li>
-      <li><a href="{{'/stories' | url}}">Stories</a></li>
-      {# <li><a href="{{'/certification' | url}}">Certification</a></li> #}
-      <li><a href="{{'/resources' | url}}">Resources</a></li>
-      <li><a href="{{'/about' | url}}">About</a></li>
-    </ul>
-  </nav>
+    <h1>{{ site.title }}</h1>
+    <nav>
+        <ul>
+            <li><a href="{{'/' | url}}">Home</a></li>
+            <li><a href="{{'/stories' | url}}">Stories</a></li>
+            <li><a href="{{'/resources' | url}}">Resources</a></li>
+            <li><a href="{{'/about' | url}}">About</a></li>
+        </ul>
+    </nav>
 </header>
 
-{% block content %}
+{%- block content -%}
 {{ content | safe }}
-{% endblock %}
+{%- endblock -%}
 
 <footer>
-  <p>Last updated: {{page.date | readableDate}}</p>
-  <p>{{site.copyrightStatement}}</p>
-  <p>{{site.licenseStatement}}</p>
+    <p>Last updated: {{ page.date | readableDate }}</p>
 </footer>
-{% endblock %}
+{%- endblock -%}
