@@ -6,11 +6,11 @@
 body {
   font-family: sans-serif;
   display: grid;
-  grid-template-rows: 10% 1fr 10%;
+  grid-template-rows: 1fr 8fr 1fr;
 }
 header {
   display: grid;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: 1fr 8fr 1fr;
   border-bottom: var(--border-color) var(--border-width) solid;
   align-items: center;
   grid-gap: 10vw;
@@ -32,11 +32,10 @@ nav ul {
   padding-left: 0;
 }
 /* main content */
-main {
-  display: grid;
-}
 main.blog-index {
+  display: grid;
   grid-template-columns: 3fr 1fr;
+  margin-top: 1rem;
 }
 main.blog-index .post-snippet {
   border: var(--border-width) solid var(--border-color);
@@ -47,15 +46,15 @@ main.blog-index .post-snippet {
 /* asides */
 aside {
   border: var(--border-width) solid var(--border-color);
-  padding: 1.5rem;
-  margin: 1rem;
+  padding-left: 1.5rem;
+  margin-left: 1rem;
 	font-size: smaller;
-  background-color: seashell;
   height: fit-content(50%);
 }
 
 aside ul{
   padding-left: 0;
+  list-style-type: none;
 }
 
 .post-snippet {
@@ -63,34 +62,39 @@ aside ul{
   margin-bottom: 2rem;
   border-bottom: var(--border-width) solid var(--border-color);
 }
-.post-snippet img {
-  width: 80%;
+article {
+  border: var(--border-width) solid var(--border-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+article img {
+  width: 60%;
 }
 .post-meta {
   line-height: .5rem;
   display: inline-block;
   font-size: smaller;
 }
-/* little things */
+/* blog post navigation */
 .collection-nav {
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-top: var(--border-width) solid var(--border-color);
-  line-height: .5rem;
+  border-top: var(--border-width) solid var(--border-color); 
 }
-.collection-nav>p:nth-of-type(1) {
-  display: flex;
-  justify-content: space-between;
-}
-.collection-nav>p:nth-of-type(2) {
-  justify-content: center;
-  display: flex;
-}
-.date {
-  font-size: smaller;
-  font-style: italic;
+.collection-nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  list-style-type: none; 
 }
 
+.collection-nav .prev {
+  grid-column: 1;
+  justify-self: start;
+}
+.collection-nav .next {
+  grid-column: 2;
+  justify-self: end;
+}
 .tag {
   font-size: smaller;
 }
@@ -100,8 +104,6 @@ aside ul{
 .tag:last-child:after {
   content: "";
 }
-
-.label {
-  font-size: smaller;
-  margin-right: 3px;
+ul.large {
+  line-height: 2rem;
 }
