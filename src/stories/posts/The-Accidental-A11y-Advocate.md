@@ -1,10 +1,9 @@
 ---
 title: The Accidental A11y Advocate
-author: Rachel Comerford
+author: rachelcomerford
 tags:
   - post
-  - sampleTag
-date: 2019-04-16
+date: 2020-01-14
 ---
 ![Series of accessibility related icons surrounding a falling figure. Header image CC jeff@narwha11y.com](/CAP/images/FallingIntoAccessibility.png)
 
