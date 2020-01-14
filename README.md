@@ -5,7 +5,7 @@ Canadian Accessible Publishing - Home for all of our work!
 
 Clone this repository locally. Then open a terminal program and go to the directory where you put the files:
 
-`$ cd ~/Downloads/CAP`
+`$ cd ~/MyFiles/CAP`
 
 Install the required libraries:
 `$ npm install`
@@ -14,15 +14,30 @@ Install the required libraries:
 
 Edit the home page: `src/index.md`
 
-Edit the style: `src/css/base.css`.
+Edit the about page: `src/about.md`
 
-Add content (in markdown or other formats) to any of these folders:
+Edit the list of resources: `src/resources.md`
 
-- `src/blog/posts`
-- `src/resources`
-- `src/certification`
+Edit the style: `src/css/style.css`
 
-Follow the examples.
+Add a post to "Accessibility Stories": Add a new file (in markdown or other formats) to `src/stories/posts`
+
+Give your post some tags: 
+
+In addition to the requisite `post` tag, you can add more tags. There is no official list of preset tags - just make something up! Add tags by editing the front matter data in your file (where you have title, author, etc):
+
+```
+---
+title: Sample post
+author: marisademeglio
+tags:
+  - post
+  - howto
+date: 2020-01-14
+---
+```
+
+
 
 ## Building the site
 
@@ -36,33 +51,7 @@ Commit your build. Github pages will pick up what's in the `docs` folder.
 * Lint your CSS with `$ gulp lint-css`
 * Pretty-format the HTML output with `$ gulp pretty-html`
 
-## TODOs
-
-Related to the site code/tooling:
-* continuous integration setup
-* better 'truncate' function for displaying blog post snippets
-* responsive design for mobile
-
-For the group:
-* Review and refine workflow
-* Write UX wishlist
-* Start creating and editing
-
 ## Architecture and design
 
-This is a static site built with [11ty](http://11ty.io). It has been configured with some specific types of content behavior:
+This is a static site built with [11ty](http://11ty.io). It includes a blog as well as standalone pages.
 
-- blog 
-  - post snippets are aggregated on the front page
-  - tags are displayed
-- section
-  - good for documentation
-  - local toc auto-generated for index page, one level deep
-- regular page
-  - standalone content
-
-What we might need:
-
-- samples library
-- search function
-- generate nested toc
