@@ -55,3 +55,8 @@ Commit your build. Github pages will pick up what's in the `docs` folder.
 
 This is a static site built with [11ty](http://11ty.io). It includes a blog as well as standalone pages.
 
+## Development TODOs
+* continuous integration setup
+* better 'truncate' function for displaying blog post snippets
+* responsive design for mobile
+
