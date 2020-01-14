@@ -9,14 +9,14 @@
 >
     <h{{hlevel}}><a href="{{ post.url | url }}">{{ post.data.title }}</a></h{{hlevel}}>
     <div class="post-meta">
-        <p>by &nbsp;
+        <p>by {{ authors[author].name }},&nbsp;
             {%- if authors[author].link -%}
-                <a href="{{ authors[author].link }}">{{ authors[author].name }}, {{ authors[author].organization }}</a>
+                <a href="{{ authors[author].link }}">{{ authors[author].organization }}</a>
             {%- else -%}
-                {{ authors[author].name }}, {{ authors[author].organization }}
+                {{ authors[author].organization }}
             {%- endif -%}
         </p>
-        <p>Posted on {{ [post.date] | readableDate }}</p>
+        <p>Posted on {{ post.date | readableDate }}</p>
         {%- if tags.length > 0 -%}
         <p>Tags:&nbsp;{%- for tag in tags -%}{{ Tag.Tag(tag) }}{%- endfor -%}</p>
         {%- endif -%}

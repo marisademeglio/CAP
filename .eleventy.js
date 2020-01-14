@@ -20,7 +20,10 @@ module.exports = function (eleventyConfig) {
         return content ? content.slice(0, chars) + "</code></pre>" : '';
     });
 
-    eleventyConfig.addFilter("readableDate", dateObj => DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy"));
+    eleventyConfig.addFilter("readableDate", dateObj => {
+        let retval = DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy", { zone: 'utc'});
+        return retval;
+    });
     
     eleventyConfig.addFilter("filterTags", (tags) => filterTags(tags));
 
