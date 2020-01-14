@@ -22,7 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0",
     "gulp": "^4.0.0",
     "gulp-pretty-html": "^2.0.10",
     "gulp-stylelint": "^9.0.0",
