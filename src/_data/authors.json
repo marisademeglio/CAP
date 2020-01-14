@@ -2,6 +2,12 @@
   "marisademeglio": {
       "name": "Marisa DeMeglio",
       "organization": "DAISY Consortium",
-      "link": "https://marisademeglio.github.io"
+      "link": "https://daisy.org"
+  },
+
+  "rachelcomerford": {
+    "name": "Rachel Comerford",
+    "organization": "Macmillan Learning",
+    "link": "https://macmillanlearning.com"
   }
 }
