@@ -23,8 +23,12 @@ main.blog-index .post-snippet {
 }
 
 aside ul{
-    padding-left: 0;
-    list-style-type: none;
+    padding: .5rem;
+}
+
+aside ul li, nav.side ul li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 article img {
