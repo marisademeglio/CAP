@@ -12,5 +12,5 @@ title: 'Accessibility Stories: All posts'
       <li><a href="{{ post.url | url }}">{{ post.data.title }}</a> by {{ post.data.authors[post.data.author].name}} on {{ post.date | readableDate }}</li>
       {%- endfor -%}
   </div>
-  {{ BlogSidebar.BlogSidebar(collections) }}
 </main>
+{{ BlogSidebar.BlogSidebar(collections) }}
