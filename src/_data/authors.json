@@ -9,5 +9,53 @@
     "name": "Rachel Comerford",
     "organization": "Macmillan Learning",
     "link": "https://macmillanlearning.com"
+  },
+
+  "ambassadorhiring": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadorgovt": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadoroutreach": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadorsearch": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadortraining": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadorlicensing": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadorcertification": {
+    "name": "first last",
+    "organization": "company",
+    "link": "link"
+  },
+
+  "ambassadorstandards": {
+    "name": "Wendy Reid",
+    "organization": "Rakuten Kobo",
+    "link": "www.kobo.com"
   }
 }
