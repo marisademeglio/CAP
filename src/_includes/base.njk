@@ -5,10 +5,9 @@
 
 {%- block body -%}
 <header>
-    <h1>{{ site.title }}</h1>
+    <h1><a href="{{'/' | url}}">{{ site.title }}</a></h1>
     <nav aria-label="Main navigation" id="main">
         <ul>
-            <li><a href="{{'/' | url}}">Home</a></li>
             <li><a href="{{'/stories' | url}}">Stories</a></li>
             <li><a href="{{'/resources' | url}}">Resources</a></li>
             <li><a href="{{'/about' | url}}">About</a></li>

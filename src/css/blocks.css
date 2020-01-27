@@ -31,3 +31,9 @@ article {
     padding-right: 1rem;
 }
 
+/* a:hover {
+    border: 2px orange solid;
+    transition-property: border;
+    transition-duration: .25s;
+    padding: 4px;
+} */
