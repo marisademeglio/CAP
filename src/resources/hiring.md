@@ -2,6 +2,7 @@
 title: Hiring of People with Disabilities
 ---
 # Hiring of People with Disabilities
+Disabilty is environmental - an accessible environment is key to inclusive hiring.
 
 ## Employment Databases
 - Canada Council of the Arts Digital Strategy Fund
@@ -15,7 +16,6 @@ title: Hiring of People with Disabilities
 
 ### Early Career and New Professional Opportunties
 
-Internships
-
+**Internships**
 - [Accessible EPUBs in InDesign](https://www.lynda.com/InDesign-tutorials/EPUB-Accessibility-Using-InDesign/751319-2.html)
 - [Ryerson: Digital Publishing and Production](https://continuing.ryerson.ca/search/publicCourseSearchDetails.do?method=load&courseId=26169)
