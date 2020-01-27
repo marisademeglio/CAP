@@ -1,28 +1,68 @@
 @import url('root.css');
 
+@media (max-width: 768px) {
+    body {
+      grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "side"
+        "footer";
+  
+      grid-template-columns: 1fr;
+      grid-template-rows:
+        auto /* Header */
+        minmax(75px, auto) /* Nav */
+        1fr /* Content */
+        minmax(75px, auto) /* Sidebar */
+        auto; /* Footer */
+    }
+  
+    nav, aside {
+      margin: 0;
+    }
+
+    header {
+        /* display: grid; */
+    }
+}
+@media (min-width: 769px) {
+    body {
+        font-family: sans-serif;
+        display: grid;
+        grid-template-areas:
+        "header header header"
+        "nav content side"
+        "footer footer footer";
+        grid-gap: 2rem;
+    }  
+    header {
+        display: grid;
+        grid-template-columns: 10rem 20rem 5rem;
+        grid-gap: 10vw;
+    }  
+}
 body {
     font-family: sans-serif;
-    display: grid;
-    grid-template-rows: 10rem 1fr 10rem;
 }
 header {
-    display: grid;
-    grid-template-columns: 10rem 20rem 5rem;
+    grid-area: header;
     border-bottom: var(--border-color) var(--border-width) solid;
     align-items: center;
-    grid-gap: 10vw;
 }
 footer {
+    grid-area: footer;
     font-size: smaller;
     font-style: italic;
     line-height: .5rem;
 }
 
 aside {
-    border: var(--border-width) solid var(--border-color);
+    grid-area: side;
     padding-left: 1.5rem;
     margin-left: 1rem;
     height: fit-content(50%);
+    border-radius: 4px;
 }
 
 article {
@@ -31,6 +71,14 @@ article {
     padding-right: 1rem;
 }
 
+main {
+    grid-area: content;
+}
+body > nav {
+    grid-area: nav;
+    padding: 1rem;
+    border-radius: 4px;
+}
 /* a:hover {
     border: 2px orange solid;
     transition-property: border;
