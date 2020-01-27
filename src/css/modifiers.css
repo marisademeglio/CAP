@@ -50,3 +50,10 @@ ul.large {
     padding-top: 0;
     margin-top: 0;
 }
+
+a:hover {
+    border: 2px orange solid;
+    transition-property: border;
+    transition-duration: .25s;
+    padding: 4px;
+}
