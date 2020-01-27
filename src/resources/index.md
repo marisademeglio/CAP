@@ -13,6 +13,12 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [What is the Accessibility for Ontarians with Disabilities Act?](https://www.aoda.ca/guide-to-the-act/)
 
+- Nova Scotia
+
+- Manitoba
+
+- British Columbia - pending
+
 - [The Canadian Accessibility Standards Development Organization (CASDO)?](https://www.canada.ca/en/canadian-accessibility-standards-development-organization.html)
 
 - [“What It Means to Be Accessible”, from the BookNet Canada blog](https://www.booknetcanada.ca/blog/2018/1/19/what-it-means-to-be-accessible)
@@ -24,6 +30,9 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [Accessibility Action Group in the UK](https://www.publishers.org.uk/activities/accessibility/)
 
+- [Libri Italiani Accessibili](https://www.fondazionelia.org/en/)
+
+- [National AEM Center](http://aem.cast.org/)
 
 ## Guides to Accessible Publishing
 - [Book Industry Study Group (BISG) Guide to Accessible Publishing & Cheat Sheets](https://bisg.org/store/ViewProduct.aspx?ID=13534677)
@@ -36,3 +45,16 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [Diagram Center](http://diagramcenter.org/)
 
+- [How to Install or Start Up Accessibility Tools in Your Operating System]
+
+## Accessible Educational Materials
+
+- Making Accessible PdFs
+
+- Making Accessible Word Documents
+
+- Making Accessible PowerPoints
+
+- Writing High Quality Image Descriptions
+
+- What Makes an Accessible Image
