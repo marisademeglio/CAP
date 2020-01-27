@@ -80,6 +80,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter('getPostForPage', (page, posts) => posts.find(post => post.fileSlug == page.fileSlug));
 
+    eleventyConfig.addFilter('iterateJsonKeys', json => Object.keys(json));
+
     eleventyConfig.setLibrary("njk", nunjucksEnv);
 
     eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
