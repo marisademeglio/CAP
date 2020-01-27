@@ -25,11 +25,17 @@ main.blog-index .post-snippet {
 aside ul{
     padding: .5rem;
 }
+li  {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    line-height: 1.5rem;
+}
 
 aside ul li, nav.side ul li {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 
 article img {
     width: 60%;
