@@ -47,14 +47,3 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [How to Install or Start Up Accessibility Tools in Your Operating System]
 
-## Accessible Educational Materials
-
-- Making Accessible PdFs
-
-- Making Accessible Word Documents
-
-- Making Accessible PowerPoints
-
-- Writing High Quality Image Descriptions
-
-- What Makes an Accessible Image
