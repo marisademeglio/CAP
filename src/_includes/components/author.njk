@@ -1,0 +1,10 @@
+{%- macro Author(author, authors) -%}
+    
+    {{ authors[author].name }},&nbsp;
+    {%- if authors[author].link -%}
+        <a href="{{ authors[author].link }}">{{ authors[author].organization }}</a>
+    {%- else -%}
+        {{ authors[author].organization }}
+    {%- endif -%}
+
+{%- endmacro -%}

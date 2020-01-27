@@ -1,5 +1,6 @@
 {%- macro BlogPost(post, truncate, hlevel) -%}
 {%- import "components/tag.njk" as Tag -%}
+{%- import "components/author.njk" as Author -%}
 {%- set tags = post.data.tags | filterTags -%}
 {%- set author = post.data.author -%}
 {%- set authors = post.data.authors -%}
@@ -9,13 +10,7 @@
 >
     <h{{hlevel}}><a href="{{ post.url | url }}">{{ post.data.title }}</a></h{{hlevel}}>
     <div class="post-meta">
-        <p>by {{ authors[author].name }},&nbsp;
-            {%- if authors[author].link -%}
-                <a href="{{ authors[author].link }}">{{ authors[author].organization }}</a>
-            {%- else -%}
-                {{ authors[author].organization }}
-            {%- endif -%}
-        </p>
+        <p>by {{ Author.Author(author, authors) }}</p>
         <p>Posted on {{ post.date | readableDate }}</p>
         {%- if tags.length > 0 -%}
         <p>Tags:&nbsp;{%- for tag in tags -%}{{ Tag.Tag(tag) }}{%- endfor -%}</p>

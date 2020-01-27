@@ -1,0 +1,37 @@
+@import url('root.css');
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: 10rem 1fr 10rem;
+}
+header {
+    display: grid;
+    grid-template-columns: 10rem 20rem 5rem;
+    border-bottom: var(--border-color) var(--border-width) solid;
+    align-items: center;
+    grid-gap: 10vw;
+}
+footer {
+    font-size: smaller;
+    font-style: italic;
+    line-height: .5rem;
+}
+
+aside {
+    border: var(--border-width) solid var(--border-color);
+    padding-left: 1.5rem;
+    margin-left: 1rem;
+    font-size: smaller;
+    height: fit-content(50%);
+}
+
+article {
+    border: var(--border-width) solid var(--border-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}

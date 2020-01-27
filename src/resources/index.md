@@ -1,5 +1,5 @@
 ---
-layout: 'page.njk'
+layout: 'resources-page.njk'
 title: Resources
 ---
 # Resources
@@ -36,15 +36,3 @@ This section aims to gather the existing guidelines and specifications in a way 
 
 - [Diagram Center](http://diagramcenter.org/)
 
-## Accessibility Etiquette
-- [“Blind etiquette: six ways to be gracious around people with visual impairments”](https://www.perkins.org/stories/blind-etiquette-six-ways-to-be-gracious-around-people-with-visual-impairments)
-
-## Free Tools for Testing
-
-- [Ace by DAISY - EPUB Accessibility Tester](https://inclusivepublishing.org/toolbox/accessibility-checker/)
-
-- [Axe by Deque](https://www.deque.com/axe/axe-for-web/)
-
-- [Paciello Group Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)
-
-- [Coblis - Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
