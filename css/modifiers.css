@@ -1,0 +1,52 @@
+@import url('root.css');
+
+.post-snippet {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+.post-meta {
+    line-height: .5rem;
+    display: inline-block;
+    font-size: smaller;
+}
+.collection-nav .prev {
+    grid-column: 1;
+    justify-self: start;
+}
+.collection-nav .next {
+    grid-column: 2;
+    justify-self: end;
+}
+.tag {
+    font-size: smaller;
+}
+.tag:after {
+    content: ", ";
+}
+.tag:last-child:after {
+    content: "";
+}
+.collection-nav {
+    margin-top: 1rem;
+    border-top: var(--border-width) solid var(--border-color); 
+}
+ul.large {
+    line-height: 2rem;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-gap: 5vw;
+    margin-top: 5vh;
+}
+
+.side ul {
+    list-style-type: disc;
+}
+
+.split nav ul, .content > *:first-child {
+    padding-top: 0;
+    margin-top: 0;
+}
