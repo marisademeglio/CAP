@@ -2,27 +2,23 @@
 
 {%- block content -%}
 
+<nav class="side" aria-label="Resources navigation">
+    <ul class="large">
+        <li><a href="{{'/resources' | url }}">Resources</a></li>
+        <li><a href="{{'/resources/accessibility-certification-process' | url }}">
+            Accessibility Certification Process</a>
+        </li>
+        <li><a href="{{'/resources/hiring' | url }}">Hiring of People with Disabilities</a></li>
+        <li><a href="{{'/resources/licensing-and-rights' | url }}">Licensing and Rights</a></li>
+        <li><a href="{{'/resources/policy-and-legislation' | url }}">Policy and Legislation</a></li>
+        <li><a href="{{'/resources/search-and-discoverability' | url }}">Search and Discoverability</a></li>
+        <li><a href="{{'/resources/software' | url }}">Software</a></li>
+        <li><a href="{{'/resources/standards' | url }}">Standards</a></li>
+        <li><a href="{{'/resources/training-and-inclusion' | url }}">Training and Inclusion</a></li>
+    </ul>
+</nav>
 <main>
-    <div class="split">
-        <nav class="side" aria-label="Resources navigation">
-            <ul class="large">
-                <li><a href="{{'/resources' | url }}">Resources</a></li>
-                <li><a href="{{'/resources/accessibility-certification-process' | url }}">
-                    Accessibility Certification Process</a>
-                </li>
-                <li><a href="{{'/resources/hiring' | url }}">Hiring of People with Disabilities</a></li>
-                <li><a href="{{'/resources/licensing-and-rights' | url }}">Licensing and Rights</a></li>
-                <li><a href="{{'/resources/policy-and-legislation' | url }}">Policy and Legislation</a></li>
-                <li><a href="{{'/resources/search-and-discoverability' | url }}">Search and Discoverability</a></li>
-                <li><a href="{{'/resources/software' | url }}">Software</a></li>
-                <li><a href="{{'/resources/standards' | url }}">Standards</a></li>
-                <li><a href="{{'/resources/training-and-inclusion' | url }}">Training and Inclusion</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            {{ content | safe }}
-        </div>
-    </div>
+    {{ content | safe }}
 </main>
 
 {% endblock %}
